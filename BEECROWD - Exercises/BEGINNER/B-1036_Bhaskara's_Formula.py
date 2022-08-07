@@ -8,19 +8,14 @@ Output
 Print the result with 5 digits after the decimal point or the message if it is impossible to calculate.
 """
 
-from math import sqrt
-a, b, c = map(float, input().split())
+A, B, C = list(map(float, input().split()))
 
-x = (b**2)-(4*a*c)
+DELTA = (B**2) - (4 * A * C)
 
-if a == 0:
-    print('Impossivel calcular')
-elif x > 0:
-    x = x**(1/2)
-    x1 = (-b + x) / (2 * a)
-    print("R1 = {:.5f}".format(x1))
-    x2 = (-b - x) / (2 * a)
-    print("R2 = {:.5f}".format(x2))
-
+if DELTA > 0 and A != 0:
+    R1 = (-B + (DELTA**(1/2))) / (2 * A)
+    R2 = (-B - (DELTA**(1/2))) / (2 * A)
+    print(f"R1 = {R1:.5f}")
+    print(f"R2 = {R2:.5f}")
 else:
-    print('Impossivel calcular')
+    print(f"Impossivel calcular")

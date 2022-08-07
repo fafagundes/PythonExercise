@@ -20,27 +20,29 @@ Reajuste ganho: means "Money earned"
 Em percentual: means "In percentage"
 """
 
-salary = float(input())
+salary: float = float(input())
 
-earned = 0
-percent = 0
-
-if salary > 0 and salary <= 400.00:
-    earned = salary * (15/100)
+if 0 <= salary <= 400:
+    increase = salary * 0.15
+    salary = salary + increase
     percent = 15
-elif salary >= 400.01 and salary <= 800.00:
-    earned = salary * (12/100)
+elif 400 < salary <= 800:
+    increase = salary * 0.12
+    salary = salary + increase
     percent = 12
-elif salary >= 800.01 and salary <= 1200.00:
-    earned = salary * (10/100)
+elif 800 < salary <= 1200:
+    increase = salary * 0.10
+    salary = salary + increase
     percent = 10
-elif salary >= 1200.01 and salary <= 2000.00:
-    earned = salary * (7/100)
+elif 1200 < salary <= 2000:
+    increase = salary * 0.07
+    salary = salary + increase
     percent = 7
-elif salary > 2000.00:
-    earned = salary * (4/100)
+else:
+    increase = salary * 0.04
+    salary = salary + increase
     percent = 4
 
-print('Novo salario: {:.2f}'.format(salary + earned))
-print('Reajuste ganho: {:.2f}'.format(earned))
-print('Em percentual: {} %'.format(percent))
+print(f"Novo salario: {salary:.2f}")
+print(f"Reajuste ganho: {increase:.2f}")
+print(f"Em percentual: {percent} %")

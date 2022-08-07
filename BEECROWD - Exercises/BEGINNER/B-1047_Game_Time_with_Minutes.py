@@ -27,3 +27,25 @@ if H1 == H2:
     hd = 24
 
 print('O JOGO DUROU {} HORA(S) E {} MINUTO(S)'.format(hd, md))
+
+# Outra forma
+
+h1, m1, h2, m2 = list(map(int, input().split()))
+
+if h1 == h2 and m1 > m2:
+    hour = 24
+elif h1 > h2:
+    hour = 24 - (h1 - h2)
+else:
+    hour = h2 - h1
+
+if m1 == m2:
+    minute = 0
+    hour = 24
+elif m1 > m2:
+    minute = 60 - (m1 - m2)
+    hour = hour - 1
+else:
+    minute = m2 - m1
+
+print(f"O JOGO DUROU {hour} HORA(S) E {minute} MINUTO(S)")

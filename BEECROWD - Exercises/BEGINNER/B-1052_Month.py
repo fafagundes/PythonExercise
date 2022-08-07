@@ -7,30 +7,13 @@ The input contains only an integer number.
 Output
 Print the name of the month according to the input number, with the first letter in uppercase.
 """
-mes = int(input())
+months = ["january", "february", "march", "april", "may", "june", "july", "august",
+          "september", "october", "november", "december"]
 
-if (mes<=12 and mes>0):
-    if mes == 1:
-        print('January')
-    if mes == 2:
-        print('February')
-    if mes == 3:
-        print('March')
-    if mes == 4:
-        print('April')
-    if mes == 5:
-        print('May')
-    if mes == 6:
-        print('June')
-    if mes == 7:
-        print('July')
-    if mes == 8:
-        print('August')
-    if mes == 9:
-        print('September')
-    if mes == 10:
-        print('October')
-    if mes == 11:
-        print('November')
-    if mes == 12:
-        print('December')
+n_month = int(input())
+
+for i, month in enumerate(months):
+    if n_month == i+1:
+        print(months[i].capitalize())
+    elif 0 >= n_month > 12:
+        break

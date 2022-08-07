@@ -12,23 +12,22 @@ Print all the answers with one digit after the decimal point.
 
 N1, N2, N3, N4 = list(map(float, input().split()))
 
-media = ((N1*2) + (N2*3) + (N3*4) + N4) / 10
-print('Media: {:.1f}'.format(media))
+MEDIA = ((N1 * 2) + (N2 * 3) + (N3 * 4) + N4) / 10
 
-if media >= 7.0:
-    print('Aluno aprovado.')
-elif media < 5.0:
-    print('Aluno reprovado.')
-elif media > 5.0 and media <= 6.9:
-    print('Aluno em exame.')
-    exame = float(input(''))
-    print('Nota do exame: {:.1f}'.format(exame))
-    nota = (media + exame) / 2
-    if nota >= 5.0:
-        print('Aluno aprovado.')
-    elif nota <= 4.9:
-        print('Aluno reprovado.')
-    print('Media final: {:.1f}'.format(nota))
+if MEDIA >= 7:
+    print(f"Aluno aprovado.")
+elif 7 > MEDIA >= 5:
+    print(f"Aluno em exame.")
+    EXAME = float(input())
+    print(f"Nota do exame: {EXAME:.1f}")
+    N_EXAME = (MEDIA + EXAME) / 2
+    if N_EXAME >= 5:
+        print(f"Aluno aprovado.")
+    else:
+        print(f"Aluno reprovado.")
+    print(f"Media final: {N_EXAME:.1f}")
+else:
+    print(f"Aluno reprovado.")
 
 "O que foi aprovado:"
 

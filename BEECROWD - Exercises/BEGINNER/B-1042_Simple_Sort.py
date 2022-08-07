@@ -10,22 +10,11 @@ Present the output as requested above.
 
 a, b, c = list(map(int, input().split()))
 
-if a < b and b < c:
-    print('{}\n{}\n{}\n'.format(a, b, c))
+numbers = [a, b, c]
+numbers_sorted = sorted(numbers)
 
-elif a < c and c < b:
-    print('{}\n{}\n{}\n'.format(a, c, b))
-
-elif b < a and a < c:
-    print('{}\n{}\n{}\n'.format(b, a, c))
-
-elif b < c and c < a:
-    print('{}\n{}\n{}\n'.format(b, c, a))
-
-elif c < a and a < b:
-    print('{}\n{}\n{}\n'.format(c, a, b))
-
-elif c < b and b < a:
-    print('{}\n{}\n{}\n'.format(c, b, a))
-
-print('{}\n{}\n{}'.format(a, b, c))
+for L1 in range(len(numbers_sorted)):
+    print(f"{numbers_sorted[L1]}")
+print()
+for L2 in range(len(numbers)):
+    print(f"{numbers[L2]}")

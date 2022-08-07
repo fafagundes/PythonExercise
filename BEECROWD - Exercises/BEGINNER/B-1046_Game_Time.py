@@ -8,13 +8,13 @@ Output
 Print the duration of the game as in the sample output.
 """
 
-H1, H2 = list(map(int, input().split()))
+A, B = list(map(int, input().split()))
 
-if H1 > H2:
-    HOURS = (24 - H1) + H2
+if A == B:
+    hour = 24
+elif A > B:
+    hour = 24 - (A - B)
 else:
-    if H1 < H2:
-        HOURS = H2 - H1
-    if H1 == H2 or H2 == H1:
-        HOURS = 24
-print('O JOGO DUROU {} HORA(S)'.format(HOURS))
+    hour = B - A
+
+print(f"O JOGO DUROU {hour} HORA(S)")

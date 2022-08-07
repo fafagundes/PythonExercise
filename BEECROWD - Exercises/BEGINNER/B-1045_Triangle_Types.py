@@ -13,24 +13,15 @@ Output
 Print all the classifications of the triangle presented in the input.
 """
 
-A, B, C = input().split()
+A, B, C = list(map(float, input().split()))
 
-A = float(A)
-B = float(B)
-C = float(C)
+numnbers = [A, B, C]
+n_sorted = sorted(numnbers, reverse=True)
+A = n_sorted[0]
+B = n_sorted[1]
+C = n_sorted[2]
 
-maior_AB = (A + B + abs(A - B))/2
-
-maior = (maior_AB + C + abs(maior_AB - C))/2
-
-if maior == B:
-    B = A
-    A = maior
-if maior == C:
-    C = A
-    A = maior
-
-if A >= B + C: #Não precisa dos parenteses, não em Python
+if A >= B + C:
   print("NAO FORMA TRIANGULO")
 else:
   if (A**2) == ((B**2)+(C**2)):
@@ -39,7 +30,7 @@ else:
     print("TRIANGULO OBTUSANGULO")
   elif (A**2) < ((B**2)+(C**2)):
     print("TRIANGULO ACUTANGULO")
-  if (A == B) and (B == C) and (C == A): #Aqui você poderia ter colocado A == B == C em Python esse tipo de comparação é válida, diferente de C, como você está aplicando
+  if A == B == C:
     print("TRIANGULO EQUILATERO")
-  elif (A == B) or (B == C) or (C == A): #Mesma coisa, pode remover os parênteses
+  elif A == B or B == C or C == A:
     print("TRIANGULO ISOSCELES")

@@ -17,20 +17,18 @@ Output
 The output must be a message "Total: R$ " followed by the total value to be paid, with 2 digits after the decimal point.
 """
 
-x, y = list(map(int, input().split()))
+X, Y = list(map(int, input().split()))
 
-if x == 1:
-    valor = y * 4.00
-    print('TOTAL: R$ {:.2f}'.format(valor))
-elif x == 2:
-    valor = y * 4.50
-    print('TOTAL: R$ {:.2f}'.format(valor))
-elif x == 3:
-    valor = y * 5.00
-    print('TOTAL: R$ {:.2f}'.format(valor))
-elif x == 4:
-    valor = y * 2.00
-    print('TOTAL: R$ {:.2f}'.format(valor))
-elif x == 5:
-    valor = y * 1.50
-    print('TOTAL: R$ {:.2f}'.format(valor))
+if X == 1:
+    X = 4.00
+elif X == 2:
+    X = 4.50
+elif X == 3:
+    X = 5.00
+elif X == 4:
+    X = 2.00
+elif X == 5:
+    X = 1.50
+
+Total = X * Y
+print(f"Total: R$ {Total:.2f}")

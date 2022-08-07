@@ -8,8 +8,6 @@ Output
 Print all even numbers between 1 and 100, including them, one by row.
 """
 
-n = 1
-while n <= 100:
-    if n % 2 == 0:
-        print(n)
-    n = n + 1
+for number in range(1, 100+1):
+    if number % 2 == 0:
+        print(number)
