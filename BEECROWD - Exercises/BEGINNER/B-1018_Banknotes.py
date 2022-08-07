@@ -43,6 +43,6 @@ if 0 < var_Number < 1000000:
 #     for i in var_Notes:
 #         var_Notes = var_Number // i
 #         print(f"{var_Notes} nota(s) de R$ {i},00")
-#         var_Number -= var_Notes * i
+#         var_Number -= 1 * i
 
 
