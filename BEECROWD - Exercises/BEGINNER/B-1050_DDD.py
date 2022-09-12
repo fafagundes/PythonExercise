@@ -21,31 +21,25 @@ Output
 Print the city name corresponding to the input DDD. Print DDD nao cadastrado if doesn't exist corresponding DDD to the typed number.
 """
 
-DDD = int(input())
+v_DDD_Destination = {
+    61: "Brasilia",
+    71: "Salvador",
+    11: "Sao Paulo",
+    21: "Rio de Janeiro",
+    32: "Juiz de Fora",
+    19: "Campinas",
+    27: "Vitoria",
+    31: "Belo Horizonte"
+}
 
-if DDD == 61:
-    city = 'Brasilia'
-    print(city)
-elif DDD == 71:
-    city = 'Salvador'
-    print(city)
-elif DDD == 11:
-    city = 'Sao Paulo'
-    print(city)
-elif DDD == 21:
-    city = 'Rio de Janeiro'
-    print(city)
-elif DDD == 32:
-    city = 'Juiz de Fora'
-    print(city)
-elif DDD == 19:
-    city = 'Campinas'
-    print(city)
-elif DDD == 27:
-    city = 'Vitoria'
-    print(city)
-elif DDD == 31:
-    city = 'Belo Horizonte'
-    print(city)
-else:
-    print('DDD nao cadastrado')
+
+def get_destination():
+    v_DDD = int(input())
+
+    if v_DDD in v_DDD_Destination:
+        print(v_DDD_Destination[v_DDD])
+    else:
+        print("DDD nao cadastrado")
+
+
+get_destination()

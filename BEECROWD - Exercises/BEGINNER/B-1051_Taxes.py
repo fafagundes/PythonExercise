@@ -19,50 +19,55 @@ Output
 Print the message "R$" followed by a blank space and the total tax to be payed, with two digits after the decimal point. If the value is up to 2000, print the message "Isento".
 """
 
-salary = float(input())
+def taxes(v_Salary):
 
-if salary > 0 and salary <= 2000.00:
-    print('Isento')
-elif salary >= 2000.01 and salary <= 3000.00:
-    salary = salary - 2000.00
-    taxa = salary * (8/100)
-    print('R$ {:.2f}'.format(taxa))
-elif salary >= 3000.01 and salary <= 4500.00:
-    t18 = salary - 3000.01
-    t8 = salary - 2000.01 - t18
-    print(t18)
-    print(t8)
-    tx18 = t18 * (18/100)
-    tx8 = t8 * (8/100)
-    taxa = tx8 + tx18
-    print('R$ {:.2f}'.format(taxa))
-elif salary > 4500.00:
-    t28 = salary - 4500.00
-    t18 = salary - 3000.01 - t28
-    t8 = salary - 2000.01 - t28 - t18
-    tx28 = t28 * (28 / 100)
-    tx18 = t18 * (18 / 100)
-    tx8 = t8 * (8 / 100)
-    taxa = tx28 + tx18 + tx8
-    print('R$ {:.2f}'.format(taxa))
+    v_Taxes_28 = 0
+    v_Taxes_18 = 0
+    v_Taxes_8 = 0
 
-# O de baixo é o que foi aceito
+    if 0 <= v_Salary <= 2000.00:
+        print("Isento")
+    else:
+        if v_Salary > 4500:
+            v_Taxes_28 = (v_Salary - 4500.00) * 0.28
+            v_Salary = v_Salary - (v_Salary - 4500.00)
+        if 3000.01 <= v_Salary <= 4500:
+            v_Taxes_18 = (v_Salary - 3000.01) * 0.18
+            v_Salary = v_Salary - (v_Salary - 3000)
+        if 2000.01 <= v_Salary <= 3000:
+            v_Taxes_8 = (v_Salary - 2000.01) * 0.08
+            v_Salary = v_Salary - (v_Salary - 2000.01)
 
-d = float(input())
-p1 = 0
-p2 = 0
-p3 = 0
-if d <= 2000.00:
-    print('Isento')
-elif 2000.01 <= d <= 3000:
-    p1 = d - 2000.0
-elif 3000.01 <= d <= 4500:
-    p1 = 1000
-    p2 = d - 3000.0
-else:
-    p1 = 1000
-    p2 = 1500
-    p3 = d - 4500.0
+        v_Total_Taxes = v_Taxes_28 + v_Taxes_18 + v_Taxes_8
+        print(f"R$ {v_Total_Taxes:.2f}")
 
-if p1 != 0:
-    print('R$ {:.2f}'.format(p1*8/100+p2*18/100+p3*28/100))
+
+taxes(float(input()))
+
+# salary = float(input())
+
+# if salary > 0 and salary <= 2000.00:
+#     print('Isento')
+# elif salary >= 2000.01 and salary <= 3000.00:
+#     salary = salary - 2000.00
+#     taxa = salary * (8/100)
+#     print('R$ {:.2f}'.format(taxa))
+# elif salary >= 3000.01 and salary <= 4500.00:
+#     t18 = salary - 3000.01
+#     t8 = salary - 2000.01 - t18
+#     print(t18)
+#     print(t8)
+#     tx18 = t18 * (18/100)
+#     tx8 = t8 * (8/100)
+#     taxa = tx8 + tx18
+#     print('R$ {:.2f}'.format(taxa))
+# elif salary > 4500.00:
+#     t28 = salary - 4500.00
+#     t18 = salary - 3000.01 - t28
+#     t8 = salary - 2000.01 - t28 - t18
+#     tx28 = t28 * (28 / 100)
+#     tx18 = t18 * (18 / 100)
+#     tx8 = t8 * (8 / 100)
+#     taxa = tx28 + tx18 + tx8
+#     print('R$ {:.2f}'.format(taxa))
+

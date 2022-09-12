@@ -8,14 +8,27 @@ Output
 Print all odd values between 1 and X, including X if is the case.
 """
 
-X = int(input())
+def odd_number():
 
-i = 1
+    X = int(input())
+    if 1 <= X <= 1000:
+        for i in range(X+1):
+            if i % 2 != 0:
+                print(f"{i}")
 
-if 1 <= X <= 1000:
-    while i <= X:
-        if (i % 2) != 0:
-            print('{}'.format(i))
-        i = i + 1
+
+odd_number()
+
+
+
+# X = int(input())
+#
+# i = 1
+#
+# if 1 <= X <= 1000:
+#     while i <= X:
+#         if (i % 2) != 0:
+#             print('{}'.format(i))
+#         i = i + 1
 
 
