@@ -8,18 +8,36 @@ The first line of input is an integer N (N < 10000), that indicates the total nu
 Each case is an integer number X (-107 < X < 107).
 """
 
-inv = 0
-out = 0
+def in_out(N):
 
-N = int(input())
+    count_in = 0
+    count_out = 0
+    if N < 10000:
+        for i in range(N):
+            X = int(input())
+            if 10 <= X <= 20:
+                count_in += 1
+            else:
+                count_out += 1
+        print(f"{count_in} in")
+        print(f"{count_out} out")
 
-for c in range(0, N):
-    X = int(input())
-    if X >= 10 and X <= 20:
-        inv += 1
-    else:
-        out += 1
 
-print('{} in'.format(inv))
-print('{} out'.format(out))
+in_out(int(input()))
+
+
+# inv = 0
+# out = 0
+#
+# N = int(input())
+#
+# for c in range(0, N):
+#     X = int(input())
+#     if X >= 10 and X <= 20:
+#         inv += 1
+#     else:
+#         out += 1
+#
+# print('{} in'.format(inv))
+# print('{} out'.format(out))
 
