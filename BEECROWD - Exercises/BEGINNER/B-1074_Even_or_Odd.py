@@ -8,24 +8,48 @@ Output
 For each test case, print a corresponding message, according to the below example. All messages must be printed in uppercase letters and always will have one space between two words in the same line.
 """
 
-N = int(input())
+def even_or_odd(N):
 
-result = ''
-X = 0
+    result = ""
+    if N < 10000:
+        for i in range(N):
+            X = int(input())
+            if X > 0 and X % 2 == 0:
+                result = "EVEN POSITIVE"
+            elif X < 0 and X % 2 == 0:
+                result = "EVEN NEGATIVE"
+            elif X > 0:
+                result = "ODD POSITIVE"
+            elif X < 0:
+                result = "ODD NEGATIVE"
+            else:
+                result = "NULL"
 
-for c in range(0, N):
-    X = int(input())
+            print(result)
 
-    if X == 0:
-        result = 'NULL'
-    elif X > 0 and X % 2 == 0:
-        result = 'EVEN POSITIVE'
-    elif X < 0 and X % 2 == 0:
-        result = 'EVEN NEGATIVE'
-    elif X > 0 and X % 2 != 0:
-        result = 'ODD POSITIVE'
-    else:
-        result = 'ODD NEGATIVE'
+even_or_odd(int(input()))
 
-    print(result)
+
+
+
+# N = int(input())
+#
+# result = ''
+# X = 0
+#
+# for c in range(0, N):
+#     X = int(input())
+#
+#     if X == 0:
+#         result = 'NULL'
+#     elif X > 0 and X % 2 == 0:
+#         result = 'EVEN POSITIVE'
+#     elif X < 0 and X % 2 == 0:
+#         result = 'EVEN NEGATIVE'
+#     elif X > 0 and X % 2 != 0:
+#         result = 'ODD POSITIVE'
+#     else:
+#         result = 'ODD NEGATIVE'
+#
+#     print(result)
 
