@@ -9,8 +9,17 @@ Output
 Print the multiplication table of N., like the following example.
 """
 
-N = int(input())
+def multiplication_table(N):
 
-for c in range(1, 11):
-    print('{} x {} = {}'.format(c, N, c*N))
+    if 2 < N < 10000:
+        for i in range(1, 11):
+            print(f"{i} x {N} = {i * N}")
+
+multiplication_table(int(input()))
+
+
+# N = int(input())
+#
+# for c in range(1, 11):
+#     print('{} x {} = {}'.format(c, N, c*N))
 
