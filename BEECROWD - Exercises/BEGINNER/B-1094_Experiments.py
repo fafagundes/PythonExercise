@@ -13,32 +13,65 @@ Output
 Print the total of animals used, the total of each type of animal and the percentual of each one in relation of the total of animals used. The percentual must be printed with 2 digits after the decimal point.
 """
 
-N = int(input())
+def experiments(n):
 
-COE = 0
-RAT = 0
-SAP = 0
-TOTAL = 0
+    v_total = 0
+    v_total_habbit = 0
+    v_total_rat = 0
+    v_total_frog = 0
 
-for c in range(0, N):
-    INF = input().split()
-    TOTAL += int(INF[0])
-    if INF[1] == 'C':
-        COE += int(INF[0])
-    elif INF[1] == 'R':
-        RAT += int(INF[0])
-    elif INF[1] == 'S':
-        SAP += int(INF[0])
+    for i in range(n):
+        number, animal = list(map(str, input().split()))
+        number = int(number)
+        v_total += number
+        if animal == "C":
+            v_total_habbit += number
+        elif animal == "R":
+            v_total_rat += number
+        elif animal == "S":
+            v_total_frog += number
 
-PCOE = (COE / TOTAL) * 100
-PRAT = (RAT / TOTAL) * 100
-PSAP = (SAP / TOTAL) * 100
+    v_percent_habbit = (v_total_habbit / v_total) * 100
+    v_percent_rat = (v_total_rat / v_total) * 100
+    v_percent_frog = (v_total_frog / v_total) * 100
 
-print('Total: {} cobaias'.format(TOTAL))
-print('Total de coelhos: {}'.format(COE))
-print('Total de ratos: {}'.format(RAT))
-print('Total de sapos: {}'.format(SAP))
-print('Percentual de coelhos: {:.2f} %'.format(PCOE))
-print('Percentual de ratos: {:.2f} %'.format(PRAT))
-print('Percentual de sapos: {:.2f} %'.format(PSAP))
+    print(f"Total: {v_total} cobaias")
+    print(f"Total de coelhos: {v_total_habbit}")
+    print(f"Total de ratos: {v_total_rat}")
+    print(f"Total de sapos: {v_total_frog}")
+    print(f"Percentual de coelhos: {v_percent_habbit:.2f} %")
+    print(f"Percentual de ratos: {v_percent_rat:.2f} %")
+    print(f"Percentual de sapos: {v_percent_frog:.2f} %")
+
+experiments(int(input()))
+
+
+# N = int(input())
+#
+# COE = 0
+# RAT = 0
+# SAP = 0
+# TOTAL = 0
+#
+# for c in range(0, N):
+#     INF = input().split()
+#     TOTAL += int(INF[0])
+#     if INF[1] == 'C':
+#         COE += int(INF[0])
+#     elif INF[1] == 'R':
+#         RAT += int(INF[0])
+#     elif INF[1] == 'S':
+#         SAP += int(INF[0])
+#
+# PCOE = (COE / TOTAL) * 100
+# PRAT = (RAT / TOTAL) * 100
+# PSAP = (SAP / TOTAL) * 100
+#
+# print('Total: {} cobaias'.format(TOTAL))
+# print('Total de coelhos: {}'.format(COE))
+# print('Total de ratos: {}'.format(RAT))
+# print('Total de sapos: {}'.format(SAP))
+# print('Percentual de coelhos: {:.2f} %'.format(PCOE))
+# print('Percentual de ratos: {:.2f} %'.format(PRAT))
+# print('Percentual de sapos: {:.2f} %'.format(PSAP))
 
