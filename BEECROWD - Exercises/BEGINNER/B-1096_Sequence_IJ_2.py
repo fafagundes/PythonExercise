@@ -19,7 +19,28 @@ I=9 J=6
 I=9 J=5
 """
 
-for c in range(1, 10, 2):
-    print('I={} J={}'.format(c, 7))
-    print('I={} J={}'.format(c, 6))
-    print('I={} J={}'.format(c, 5))
+def sequence_IJ_2():
+
+    for i in range(1, 10, 2):
+        for j in range(7, 4, -1):
+            print(f"I={i} J={j}")
+
+
+sequence_IJ_2()
+
+# def sequence_IJ_2():
+#
+#     for i in range(1, 11, 3):
+#         if i > 1:
+#             i -= 1
+#         for j in range(7, 4, -1):
+#             print(f"I={i} J={j}")
+#
+#
+# sequence_IJ_2()
+
+
+# for c in range(1, 10, 2):
+#     print('I={} J={}'.format(c, 7))
+#     print('I={} J={}'.format(c, 6))
+#     print('I={} J={}'.format(c, 5))

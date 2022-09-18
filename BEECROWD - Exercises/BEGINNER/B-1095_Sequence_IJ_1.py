@@ -13,10 +13,21 @@ I=7 J=50
 ...
 I=? J=0
 """
-I = 1
 
-for c in range(60, -1, -5):
-    print('I={} J={}'.format(I, c))
-    I += 3
+def sequence_IJ_1():
+
+    i = 1
+    for j in range(60, -1, -5):
+        print(f"I={i} J={j}")
+        i += 3
+
+
+sequence_IJ_1()
+
+# I = 1
+#
+# for c in range(60, -1, -5):
+#     print('I={} J={}'.format(I, c))
+#     I += 3
 
 
