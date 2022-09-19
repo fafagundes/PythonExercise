@@ -11,27 +11,46 @@ For each pair of numbers, print the sequence from the smallest to the biggest an
 3 4 5 6 Sum=18
 """
 
-total = 0
+def numbers_and_sum():
 
-M, N = list(map(int, input().split()))
+    while True:
+        m, n = list(map(int, input().split()))
+        if m > n:
+            m, n = n, m
+        if m > 0 and n > 0:
+            total_numbers = 0
+            for numbers in range(m, n + 1):
+                total_numbers += numbers
+                print(f"{numbers}", end=" ")
+            print(f"Sum={total_numbers}")
+        else:
+            break
 
-while M > 0 or N > 0: # Aqui eu uso o while, mas eu não estudei a respeito
 
-    if M == 0 or N == 0 or M < 0 or N < 0: # Condições para o programa parar ou seguir
-        break
-    elif M > N:
-        A = N
-        B = M
-        for c in range(A, B+1): # Inverto se o primeiro número for maior para colocar no laço de repetição
-            print('{} '.format(c), end="") # Inprimo ao lado os números conforme solicita no output
-            total += c
-        print('Sum={}'.format(total))
-        total = 0
-    else:
-        for d in range(M, N+1):
-            print('{} '.format(d), end="")
-            total += d
-        print('Sum={}'.format(total))
-        total = 0
+numbers_and_sum()
 
-    M, N = list(map(int, input().split())) # Aqui solicito os dados novamente, pois estou dentro do laço
+
+# total = 0
+#
+# M, N = list(map(int, input().split()))
+#
+# while M > 0 or N > 0: # Aqui eu uso o while, mas eu não estudei a respeito
+#
+#     if M == 0 or N == 0 or M < 0 or N < 0: # Condições para o programa parar ou seguir
+#         break
+#     elif M > N:
+#         A = N
+#         B = M
+#         for c in range(A, B+1): # Inverto se o primeiro número for maior para colocar no laço de repetição
+#             print('{} '.format(c), end="") # Inprimo ao lado os números conforme solicita no output
+#             total += c
+#         print('Sum={}'.format(total))
+#         total = 0
+#     else:
+#         for d in range(M, N+1):
+#             print('{} '.format(d), end="")
+#             total += d
+#         print('Sum={}'.format(total))
+#         total = 0
+#
+#     M, N = list(map(int, input().split())) # Aqui solicito os dados novamente, pois estou dentro do laço
