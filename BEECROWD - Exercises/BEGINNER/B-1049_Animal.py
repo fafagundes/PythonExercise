@@ -35,33 +35,33 @@ if op1 == "invertebrado" and op2 == "inseto" and op3 == "herbivoro":
 if op1 == "invertebrado" and op2 == "anelideo" and op3 == "hematofago":
     print("sanguessuga")
 
-op1 = str(input())
-op2 = str(input())
-op3 = str(input())
+# op1 = str(input())
+# op2 = str(input())
+# op3 = str(input())
 
-lista = [op1, op2, op3]
-aguia = ["vertebrado", "ave", "carnivoro"]
-pomba = ["vertebrado", "ave", "onivoro"]
-homem = ["vertebrado", "manifero", "onivoro"]
-vaca = ["vertebrado", "manifero", "herbivoro"]
-pulga = ["invertebrado", "inseto", "hematofago"]
-lagarta = ["invertebrado", "inseto", "herbivoro"]
-sanguessuga = ["invertebrado", "anelideo", "hematofago"]
-minhoca = ["invertebrado", "anelideo", "onivoro"]
-
-if lista == aguia:
-    print("aguia")
-elif lista == pomba:
-    print("pomba")
-elif lista == homem:
-    print("homem")
-elif lista == vaca:
-    print("vaca")
-elif lista == pulga:
-    print("pulga")
-elif lista == lagarta:
-    print("lagarta")
-elif lista == sanguessuga:
-    print("sanguessuga")
-else:
-    print("minhoca")
+# lista = [op1, op2, op3]
+# aguia = ["vertebrado", "ave", "carnivoro"]
+# pomba = ["vertebrado", "ave", "onivoro"]
+# homem = ["vertebrado", "manifero", "onivoro"]
+# vaca = ["vertebrado", "manifero", "herbivoro"]
+# pulga = ["invertebrado", "inseto", "hematofago"]
+# lagarta = ["invertebrado", "inseto", "herbivoro"]
+# sanguessuga = ["invertebrado", "anelideo", "hematofago"]
+# minhoca = ["invertebrado", "anelideo", "onivoro"]
+#
+# if lista == aguia:
+#     print("aguia")
+# elif lista == pomba:
+#     print("pomba")
+# elif lista == homem:
+#     print("homem")
+# elif lista == vaca:
+#     print("vaca")
+# elif lista == pulga:
+#     print("pulga")
+# elif lista == lagarta:
+#     print("lagarta")
+# elif lista == sanguessuga:
+#     print("sanguessuga")
+# else:
+#     print("minhoca")

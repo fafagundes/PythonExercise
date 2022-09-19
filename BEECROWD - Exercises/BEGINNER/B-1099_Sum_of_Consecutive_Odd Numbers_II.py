@@ -8,30 +8,47 @@ Output
 Print the sum of all odd numbers between X and Y.
 """
 
-N = int(input())
+def sum_odd_numbers_2(n):
 
-sumone = 0
-sumtwo = 0
+    for i in range(n):
+        x, y = list(map(int, input().split()))
+        if x > y:
+            x, y = y, x
 
-for c in range(0, N):
-    X, Y = list(map(int, input().split()))
+        total_odds = 0
+        for odd in range(x+1, y):
+            if odd % 2 != 0:
+                total_odds += odd
+        print(total_odds)
 
-    if X > Y:
-        A = Y
-        B = X
-        #print(A, B)
-        for i in range(A+1, B):
-            if A == B:
-                sumone = 0
-            elif i % 2 != 0:
-                sumone += i
-        print(sumone) # Espero o laço de repetição terminar para imprimir
-        sumone = 0 # Zero o contado para o outro laço posterior
-    else:
-        for j in range(X+1, Y):
-            if X == Y:
-                sumtwo = 0
-            elif j % 2 != 0:
-                sumtwo += j
-        print(sumtwo)
-        sumtwo = 0
+
+sum_odd_numbers_2(int(input()))
+
+
+# N = int(input())
+#
+# sumone = 0
+# sumtwo = 0
+#
+# for c in range(0, N):
+#     X, Y = list(map(int, input().split()))
+#
+#     if X > Y:
+#         A = Y
+#         B = X
+#         #print(A, B)
+#         for i in range(A+1, B):
+#             if A == B:
+#                 sumone = 0
+#             elif i % 2 != 0:
+#                 sumone += i
+#         print(sumone) # Espero o laço de repetição terminar para imprimir
+#         sumone = 0 # Zero o contado para o outro laço posterior
+#     else:
+#         for j in range(X+1, Y):
+#             if X == Y:
+#                 sumtwo = 0
+#             elif j % 2 != 0:
+#                 sumtwo += j
+#         print(sumtwo)
+#         sumtwo = 0
