@@ -10,12 +10,26 @@ For each test case print the result of this division with one digit after the de
 Obs.: Be carefull. The division between two integers in some languages generates another integer. Use cast:)
 """
 
-N = int(input())
+def div(n):
 
-for c in range(0, N):
-    X, Y = list(map(int, input().split()))
-    if Y == 0:
-        print('divisao impossivel')
-    else:
-        div = X / Y
-        print(div)
+    for i in range(n):
+        x, y = list(map(int, input().split()))
+
+        if y != 0:
+            result_div = x / y
+            print(f"{result_div:.1f}")
+        else:
+            print(f"divisao impossivel")
+
+
+div(int(input()))
+
+# N = int(input())
+#
+# for c in range(0, N):
+#     X, Y = list(map(int, input().split()))
+#     if Y == 0:
+#         print('divisao impossivel')
+#     else:
+#         div = X / Y
+#         print(div)

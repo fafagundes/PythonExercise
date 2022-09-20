@@ -9,20 +9,60 @@ When an invalid score is read, you should print the message "nota invalida".
 After the input of two valid scores, the message "media = " must be printed followed by the average of the student. The average must be printed with 2 numbers after the decimal point.
 """
 
+def score_validation():
 
-soma = 0
-c = 0
+    total = 0
+    count = 0
 
-a = float(input())
+    while count != 2:
 
-while(True):
-    if a >= 0 and a <= 10:
-        soma += a
-        c += 1
-        if c == 2:
-            media = soma / 2
-            print('media = {:.2f}'.format(media))
-            break
-    else:
-        print('nota invalida')
-    a = float(input())
+        score = float(input())
+        if 0 <= score <= 10:
+            total += score
+            count += 1
+        else:
+            print(f"nota invalida")
+    print(f"media = {total / 2:.2f}")
+
+
+score_validation()
+
+
+# def score_validation():
+#
+#     total = 0
+#     count = 0
+#
+#     while True:
+#
+#         if count >= 2:
+#             print(f"media = {total / 2:.2f}")
+#             break
+#         else:
+#             score = float(input())
+#             if 0 <= score <= 10:
+#                 total += score
+#                 count += 1
+#             else:
+#                 print(f"nota invalida")
+#
+#
+# score_validation()
+
+
+# soma = 0
+# c = 0
+#
+# a = float(input())
+#
+# while(True):
+#     if a >= 0 and a <= 10:
+#         soma += a
+#         c += 1
+#         if c == 2:
+#             media = soma / 2
+#             print('media = {:.2f}'.format(media))
+#             break
+#     else:
+#         print('nota invalida')
+#     a = float(input())
