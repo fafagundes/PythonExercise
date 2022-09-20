@@ -8,17 +8,36 @@ Output
 For each test case, print the corresponding quadrant which these coordinates belong, as in the example.
 """
 
-X, Y = list(map(int, input().split()))
+def quadrant():
 
-while(True):
-    if X == 0 or Y == 0:
-        break
-    if X > 0 and Y > 0:
-        print('primeiro')
-    elif X < 0 and Y > 0:
-        print('segundo')
-    elif X < 0 and Y < 0:
-        print('terceiro')
-    elif X > 0 and Y < 0:
-        print('quarto')
-    X, Y = list(map(int, input().split()))
+    while True:
+        x, y = list(map(int, input().split()))
+        if x > 0 and y > 0:
+            print(f"primeiro")
+        elif x < 0 and y > 0:
+            print(f"segundo")
+        elif x < 0 and y < 0:
+            print(f"terceiro")
+        elif x > 0 and y < 0:
+            print(f"quarto")
+        elif x == 0 or y == 0:
+            break
+
+
+quadrant()
+
+
+# X, Y = list(map(int, input().split()))
+#
+# while(True):
+#     if X == 0 or Y == 0:
+#         break
+#     if X > 0 and Y > 0:
+#         print('primeiro')
+#     elif X < 0 and Y > 0:
+#         print('segundo')
+#     elif X < 0 and Y < 0:
+#         print('terceiro')
+#     elif X > 0 and Y < 0:
+#         print('quarto')
+#     X, Y = list(map(int, input().split()))

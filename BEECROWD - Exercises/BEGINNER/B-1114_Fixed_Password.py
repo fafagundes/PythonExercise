@@ -8,12 +8,27 @@ Output
 For each number read print a message corresponding to the description of the problem.
 """
 
-passwd = int(input())
+def fixed_password():
 
-while(True):
-    if passwd != 2002:
-        print('Senha Invalida')
-    else:
-        print('Acesso Permitido')
-        break
-    passwd = int(input())
+    while True:
+        password = int(input())
+
+        if password != 2002:
+            print(f"Senha Invalida")
+        else:
+            print(f"Acesso Permitido")
+            break
+
+
+fixed_password()
+
+
+# passwd = int(input())
+#
+# while(True):
+#     if passwd != 2002:
+#         print('Senha Invalida')
+#     else:
+#         print('Acesso Permitido')
+#         break
+#     passwd = int(input())
