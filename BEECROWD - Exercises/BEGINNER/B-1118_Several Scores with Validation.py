@@ -12,31 +12,60 @@ If an invalid score is read, must be printed the message "nota inválida". When 
 The output average must be printed with 2 digits after the decimal point.
 """
 
-# Declaração das variaveis
-soma = 0
-c = 0
-X = 0
+def score_validation_2():
 
-a = float(input()) # Solicito informações
+    option = 1
 
-while(True): # Enquanto solicitar informações e não houver um break
-    if a >= 0 and a <= 10: # Se o número está entre 0 e 10
-        soma += a # Pego o número e adiciono na soma
-        c += 1 # faço um contador
-        if c == 2: # se o contador recebeu dois números
-            media = soma / 2 # Calculo a média
-            print('media = {:.2f}'.format(media)) # Imprimo a média
-            X = int(input('novo calculo (1-sim 2-nao)\n')) # Peço informações se quer continuar
-            a = 0 # Zero as variaveis, pois o calculo foi feito e se querer continuar devem estar zeradas
-            c = 0
-            soma = 0
-            while 1 != X != 2: # Aqui faço um outro "enquanto" caso não for digitado 1 ou 2
-                X = int(input('novo calculo (1-sim 2-nao)\n'))
-            if X == 1: # Se for 1, digo novamente que a varialvel vai ficar zerada, pois vai solicitar a informação no final
-                a = 0
-            elif X == 2: # aqui paro o programa
-                break
+    while option != 2:
 
-    else:
-        print('nota invalida') # Aqui é a condição contraria a primeira do 0 a 10
-    a = float(input()) # Peço a informação novamente para continuar o enquanto
+        if option == 1:
+
+            count = 0
+            total = 0
+
+            while count != 2:
+
+                score = float(input())
+                if 0 <= score <= 10:
+                    total += score
+                    count += 1
+                else:
+                    print(f"nota invalida")
+            print(f"media = {total / 2:.2f}")
+
+            option = 3
+
+        else:
+            option = int(input(f"novo calculo (1-sim 2-nao)\n"))
+
+
+score_validation_2()
+
+# # Declaração das variaveis
+# soma = 0
+# c = 0
+# X = 0
+#
+# a = float(input()) # Solicito informações
+#
+# while(True): # Enquanto solicitar informações e não houver um break
+#     if a >= 0 and a <= 10: # Se o número está entre 0 e 10
+#         soma += a # Pego o número e adiciono na soma
+#         c += 1 # faço um contador
+#         if c == 2: # se o contador recebeu dois números
+#             media = soma / 2 # Calculo a média
+#             print('media = {:.2f}'.format(media)) # Imprimo a média
+#             X = int(input('novo calculo (1-sim 2-nao)\n')) # Peço informações se quer continuar
+#             a = 0 # Zero as variaveis, pois o calculo foi feito e se querer continuar devem estar zeradas
+#             c = 0
+#             soma = 0
+#             while 1 != X != 2: # Aqui faço um outro "enquanto" caso não for digitado 1 ou 2
+#                 X = int(input('novo calculo (1-sim 2-nao)\n'))
+#             if X == 1: # Se for 1, digo novamente que a varialvel vai ficar zerada, pois vai solicitar a informação no final
+#                 a = 0
+#             elif X == 2: # aqui paro o programa
+#                 break
+#
+#     else:
+#         print('nota invalida') # Aqui é a condição contraria a primeira do 0 a 10
+#     a = float(input()) # Peço a informação novamente para continuar o enquanto
