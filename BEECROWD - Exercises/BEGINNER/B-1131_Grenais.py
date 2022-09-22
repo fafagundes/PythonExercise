@@ -14,36 +14,73 @@ Output
 After each reading of the goals it must be printed the message "Novo grenal (1-sim 2-nao)". When the program is finished, the program must print the statistics as the example below.
 """
 
-I, G = list(map(int, input().split()))
+def grenais():
 
-somaG = 0
-somaI = 0
-emp = 0
-c = 1
+    option = 1
+    grenais = 0
+    v_inter = 0
+    v_gremio = 0
+    empates = 0
 
+    while option != 2:
 
-while(True):
-    if I > G:
-        somaI += 1
-    elif G > I:
-        somaG += 1
+        if option == 1:
+            inter, gremio = list(map(int, input().split()))
+            grenais += 1
+
+            if inter > gremio:
+                v_inter += 1
+            elif inter == gremio:
+                empates += 1
+            else:
+                v_gremio += 1
+
+            option = int(input(f"Novo grenal (1-sim 2-nao)\n"))
+
+    print(f"{grenais} grenais")
+    print(f"Inter:{v_inter}")
+    print(f"Gremio:{v_gremio}")
+    print(f"Empates:{empates}")
+    if v_inter > v_gremio:
+        print(f"Inter venceu mais")
+    elif v_inter < v_gremio:
+        print(f"Gremio venceu mais")
     else:
-        emp += 1
-    nov = int(input('Novo grenal (1-sim 2-nao)\n'))
-    while 1 != nov != 2:
-        nov = int(input('Novo grenal (1-sim 2-nao)\n'))
-    if nov == 1:
-        c += 1
-    elif nov == 2:
-        print('{} grenais'.format(c))
-        print('Inter:{}'.format(somaI))
-        print('Gremio:{}'.format(somaG))
-        print('Empates:{}'.format(emp))
-        if somaI > somaG:
-            print('Inter venceu mais')
-        elif somaG > somaI:
-            print('Gremio venceu mais')
-        else:
-            print('Não houve vencedor')
-        break
-    I, G = list(map(int, input().split()))
+        print(f"Não houve vencedor")
+
+grenais()
+
+
+# I, G = list(map(int, input().split()))
+#
+# somaG = 0
+# somaI = 0
+# emp = 0
+# c = 1
+#
+#
+# while(True):
+#     if I > G:
+#         somaI += 1
+#     elif G > I:
+#         somaG += 1
+#     else:
+#         emp += 1
+#     nov = int(input('Novo grenal (1-sim 2-nao)\n'))
+#     while 1 != nov != 2:
+#         nov = int(input('Novo grenal (1-sim 2-nao)\n'))
+#     if nov == 1:
+#         c += 1
+#     elif nov == 2:
+#         print('{} grenais'.format(c))
+#         print('Inter:{}'.format(somaI))
+#         print('Gremio:{}'.format(somaG))
+#         print('Empates:{}'.format(emp))
+#         if somaI > somaG:
+#             print('Inter venceu mais')
+#         elif somaG > somaI:
+#             print('Gremio venceu mais')
+#         else:
+#             print('Não houve vencedor')
+#         break
+#     I, G = list(map(int, input().split()))
