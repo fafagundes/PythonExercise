@@ -8,17 +8,33 @@ Output
 Print all numbers according to above description, always in ascending order.
 """
 
-X = int(input())
-Y = int(input())
+def rest_of_division():
 
-if Y < X:
-    A = Y
-    B = X
-else:
-    A = X
-    B = Y
+    x = int(input())
+    y = int(input())
 
-for A in range(A+1, B):
-    if A % 5 == 2 or A % 5 == 3:
-        print(A)
-    A += 1
+    if x > y:
+        x, y = y, x
+
+    for i in range(x+1, y):
+        if i % 5 == 2 or i % 5 == 3:
+            print(i)
+
+
+rest_of_division()
+
+
+# X = int(input())
+# Y = int(input())
+#
+# if Y < X:
+#     A = Y
+#     B = X
+# else:
+#     A = X
+#     B = Y
+#
+# for A in range(A+1, B):
+#     if A % 5 == 2 or A % 5 == 3:
+#         print(A)
+#     A += 1
