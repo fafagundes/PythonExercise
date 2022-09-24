@@ -15,15 +15,30 @@ Print the output according to the given example.
 21 22 23 PUM
 25 26 27 PUM
 """
-n1 = 1
-n2 = 2
-n3 = 3
+def pum(n):
 
-N = int(input())
+    a = 1
+    b = 2
+    c = 3
+    for i in range(n):
+        print(f"{a} {b} {c} PUM")
+        a += 4
+        b += 4
+        c += 4
 
-for c in range(0, N):
-    print('{} {} {} PUM'.format(n1, n2, n3))
-    n1 += 4
-    n2 += 4
-    n3 += 4
+
+pum(int(input()))
+
+
+# n1 = 1
+# n2 = 2
+# n3 = 3
+#
+# N = int(input())
+#
+# for c in range(0, N):
+#     print('{} {} {} PUM'.format(n1, n2, n3))
+#     n1 += 4
+#     n2 += 4
+#     n3 += 4
 
