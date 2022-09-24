@@ -13,17 +13,30 @@ Print the output according to the given example.
 4 16 64
 5 25 125
 """
-from math import sqrt
-from math import pow
 
-N = int(input())
+def squared_and_cubic(n):
 
-nu = 1
-nu2 = 1
-nu3 = 1
+    a = 1
+    b = 1
+    c = 1
+    for i in range(n):
+        print(f"{a} {b} {c}")
+        a += 1
+        b = a * a
+        c = a * b
 
-for c in range(0, N):
-    print('{:.0f} {:.0f} {:.0f}'.format(nu, nu2, nu3))
-    nu += 1
-    nu2 = pow(nu, 2)
-    nu3 = pow(nu, 3)
+
+squared_and_cubic(int(input()))
+
+
+# N = int(input())
+#
+# nu = 1
+# nu2 = 1
+# nu3 = 1
+#
+# for c in range(0, N):
+#     print('{:.0f} {:.0f} {:.0f}'.format(nu, nu2, nu3))
+#     nu += 1
+#     nu2 = pow(nu, 2)
+#     nu3 = pow(nu, 3)
