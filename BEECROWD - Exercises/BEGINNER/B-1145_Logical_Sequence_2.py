@@ -17,18 +17,28 @@ Output Sample
 ...
 97 98 99
 """
+def logical_sequence2():
+    x, y = list(map(int, input().split()))
+    for j in range(1, y + 1, x):
+        for i in range(j, x+j):
+            print(f"{i}", end=" ")
+        print()
 
-X, Y = list(map(int, input().split()))
-A = X
-saida = ''
 
-for c in range(1, Y+1):
-    if c < A: # Aqui vai imprimir com espaço no final
-        print(c, end=' ')
-    elif c == A: # Aqui tira o espaço no final e quebra a linha
-        print(c, end='')
-        print(saida)
-        A += X # Aqui vou acrescentando o contador de X em X
+logical_sequence2()
+
+
+# X, Y = list(map(int, input().split()))
+# A = X
+# saida = ''
+#
+# for c in range(1, Y+1):
+#     if c < A: # Aqui vai imprimir com espaço no final
+#         print(c, end=' ')
+#     elif c == A: # Aqui tira o espaço no final e quebra a linha
+#         print(c, end='')
+#         print(saida)
+#         A += X # Aqui vou acrescentando o contador de X em X
 
 
 
