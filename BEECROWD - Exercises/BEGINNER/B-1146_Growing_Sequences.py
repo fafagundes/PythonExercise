@@ -21,14 +21,30 @@ Output Sample
 1 2 3
 """
 
-X = 1
+def growing_sequences(x):
+    num = ""
+    for i in range(1, x+1):
+        num = num + str(i) + " "
+    return num.rstrip()
 
-while X != 0:
-    X = int(input())
-    for c in range(1, X+1):
-        if c < X:
-            print(c, end=' ')
-        elif c == X:
-            print(c, end='\n')
+
+x = 1
+while True:
+    x = int(input())
+    if x != 0:
+        print(growing_sequences(x))
+    else:
+        break
+
+
+# X = 1
+#
+# while X != 0:
+#     X = int(input())
+#     for c in range(1, X+1):
+#         if c < X:
+#             print(c, end=' ')
+#         elif c == X:
+#             print(c, end='\n')
 
 

@@ -17,15 +17,28 @@ Output Sample
 ...
 97 98 99
 """
+
 def logical_sequence2():
     x, y = list(map(int, input().split()))
     for j in range(1, y + 1, x):
+        num = ""
         for i in range(j, x+j):
-            print(f"{i}", end=" ")
-        print()
+            num = num + str(i) + " "
+        print(num.rstrip())
 
 
 logical_sequence2()
+
+
+# def logical_sequence2():
+#     x, y = list(map(int, input().split()))
+#     for j in range(1, y + 1, x):
+#         for i in range(j, x+j):
+#             print(f"{i}", end=" ")
+#         print()
+#
+#
+# logical_sequence2()
 
 
 # X, Y = list(map(int, input().split()))
