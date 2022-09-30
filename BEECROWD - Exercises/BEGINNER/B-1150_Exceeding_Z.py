@@ -10,20 +10,38 @@ Output
 Print a line with an integer number representing the among of integer numbers that must be summed.
 """
 
-X = int(input())
-Z = int(input())
+def exceeding_z():
+    x = int(input())
+    z = total = count = 0
 
-while Z <= X: # Solicita que o valor de Z seja maior que o X
-    Z = int(input())
+    while z <= x:
+        z = int(input())
+        if z > x:
+            for i in range(x, z):
+                total += i
+                count += 1
+                if total > z:
+                    print(count)
+                    break
 
-SUM = X # O valor de soma fica = ao de X, pois começamos por ele
-COUNT = 1 # Vou começar de 1 pois com a calculo X + 0 é ele mesmo
 
-while X < Z:
-    SUM = SUM + (X + 1) # Faço a seguinte conta ( 3 = 3 + 3 + 1)
-    X += 1 # Depois com isso ficaria (7 = 7 + 4 + 1)
-    COUNT += 1 # Continuo o contador
-    if SUM > Z: # Se Z for menor que a soma eu paro
-        break
-print(COUNT)
+exceeding_z()
+
+
+# X = int(input())
+# Z = int(input())
+#
+# while Z <= X: # Solicita que o valor de Z seja maior que o X
+#     Z = int(input())
+#
+# SUM = X # O valor de soma fica = ao de X, pois começamos por ele
+# COUNT = 1 # Vou começar de 1 pois com a calculo X + 0 é ele mesmo
+#
+# while X < Z:
+#     SUM = SUM + (X + 1) # Faço a seguinte conta ( 3 = 3 + 3 + 1)
+#     X += 1 # Depois com isso ficaria (7 = 7 + 4 + 1)
+#     COUNT += 1 # Continuo o contador
+#     if SUM > Z: # Se Z for menor que a soma eu paro
+#         break
+# print(COUNT)
 
