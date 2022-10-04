@@ -10,10 +10,19 @@ The output contains a value corresponding to the value of S.
 The value should be printed with two digits after the decimal point.
 """
 
+def s_sequence():
+    s = 1
+    for i in range(2, 101):
+        s = s + (1/i)
+    print(f"{s:.2f}")
 
-S = int(0)
 
-for i in range(1,101):
-    S = S + (1/i)
+s_sequence()
 
-print(round(S,2))
+
+# S = int(0)
+#
+# for i in range(1,101):
+#     S = S + (1/i)
+#
+# print(round(S,2))

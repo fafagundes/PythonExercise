@@ -16,11 +16,20 @@ Output Sample
 6
 """
 
-N = int(input())
+def divisors_1(n):
+    for i in range(1, n+1):
+        if n % i == 0:
+            print(i)
 
-for c in range(1, N+1):
-    if N % 2 != 0:
-        break
-    else:
-        if N % c == 0:
-            print(c)
+
+divisors_1(int(input()))
+
+
+# N = int(input())
+#
+# for c in range(1, N+1):
+#     if N % 2 != 0:
+#         break
+#     else:
+#         if N % c == 0:
+#             print(c)

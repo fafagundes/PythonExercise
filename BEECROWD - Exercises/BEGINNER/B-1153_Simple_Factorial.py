@@ -8,15 +8,24 @@ Output
 The output contains an integer value corresponding to the factorial of N.
 """
 
-N = int(input())
+def simple_factorial(n):
+    for i in range(n-1, 1, -1):
+        n = n * i
+    print(n)
 
-f = 1
-c = N
-resul = N
 
-for x in range(N-1, 0, -1):
-    resul = resul * x
-print(resul)
+simple_factorial(int(input()))
+
+
+# N = int(input())
+#
+# f = 1
+# c = N
+# resul = N
+#
+# for x in range(N-1, 0, -1):
+#     resul = resul * x
+# print(resul)
 
 
 """
