@@ -11,17 +11,38 @@ Output
 Print the output according to the example below.
 """
 
-while True:
-    X = int(input())
-    if X == 0:
-        break
-    if X % 2 != 0:
-        X += 1
-    total = 0
-    a = 1
-    while a <= 5:
-        total += X
-        a += 1
-        X += 2
-    print(total)
+def sum_even():
+
+    while True:
+        x = int(input())
+        if x == 0:
+            break
+        else:
+            if x % 2 != 0:
+                x += 1
+
+            result = 0
+            for i in range(5):
+                result += x
+                x += 2
+
+            print(result)
+
+
+sum_even()
+
+
+# while True:
+#     X = int(input())
+#     if X == 0:
+#         break
+#     if X % 2 != 0:
+#         X += 1
+#     total = 0
+#     a = 1
+#     while a <= 5:
+#         total += X
+#         a += 1
+#         X += 2
+#     print(total)
 
