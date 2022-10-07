@@ -11,15 +11,31 @@ For each test case print the message “X eh primo” (X is prime) or “X nao e
 according with to above specification.
 """
 
-N = int(input())
+def prime_number(n):
+    for i in range(n):
+        x = int(input())
+        count = 0
+        for j in range(1, x+1):
+            if x % j == 0:
+                count += 1
+        if count == 2:
+            print(f"{x} eh primo")
+        else:
+            print(f"{x} nao eh primo")
 
-for c in range(0, N):
-    X = int(input())
-    total = 0
-    for a in range(1, X+1):
-        if X % a == 0:
-            total += 1
-    if total == 2:
-        print('{} eh primo'.format(X))
-    else:
-        print('{} nao eh primo'.format(X))
+
+prime_number(int(input()))
+
+
+# N = int(input())
+#
+# for c in range(0, N):
+#     X = int(input())
+#     total = 0
+#     for a in range(1, X+1):
+#         if X % a == 0:
+#             total += 1
+#     if total == 2:
+#         print('{} eh primo'.format(X))
+#     else:
+#         print('{} nao eh primo'.format(X))

@@ -12,15 +12,32 @@ For each test case print the message “X eh perfeito” (X is perfect) or “X 
 according with to above specification.
 """
 
-N = int(input())
+def perfect_number(n):
+    for i in range(n):
+        x = int(input())
+        count = 0
+        for j in range(1, x):
+            if x % j == 0:
+                count += j
+        if count == x:
+            print(f"{x} eh perfeito")
+        else:
+            print(f"{x} nao eh perfeito")
 
-for c in range(0, N):
-    X = int(input())
-    sum1 = 0
-    for i in range(1, X):
-        if X % i == 0:
-            sum1 += i
-    if sum1 == X:
-        print('{} eh perfeito'.format(X))
-    else:
-        print('{} nao eh perfeito'.format(X))
+
+perfect_number(int(input()))
+
+
+#
+# N = int(input())
+#
+# for c in range(0, N):
+#     X = int(input())
+#     sum1 = 0
+#     for i in range(1, X):
+#         if X % i == 0:
+#             sum1 += i
+#     if sum1 == X:
+#         print('{} eh perfeito'.format(X))
+#     else:
+#         print('{} nao eh perfeito'.format(X))
