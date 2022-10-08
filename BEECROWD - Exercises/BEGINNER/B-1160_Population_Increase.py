@@ -26,24 +26,45 @@ Remember that if this time is greater than 100 it will be necessary printing the
 In each one of these cases, maybe would be interesting interrupt the counting, otherwise you'll get "Time Limit Exceeded".
 """
 
-from math import floor #Para não ter números com casa decimais
+def population_increase(n):
+    for i in range(n):
+        pa, pb, ga, gb = list(map(float, input().split()))
+        pa = int(pa)
+        pb = int(pb)
 
-T = int(input())
+        years = 0
+        while pb >= pa:
+            pa = int((((ga / 100) * pa) + pa))
+            pb = int((((gb / 100) * pb) + pb))
+            years += 1
+        if years > 100:
+            print(f"Mais de 1 seculo.")
+        else:
+            print(f"{years} anos.")
 
-for c in range(0, T):
-    PA, PB, G1, G2 = input().split()
-    PA = int(PA)
-    PB = int(PB)
-    G1 = float(G1)
-    G2 = float(G2)
-    y = 1
-    while True:
-        PA += floor(PA * (G1 / 100))
-        PB += floor(PB * (G2 / 100))
-        if y > 100:
-            print('Mais de 1 seculo.')
-            break
-        if PA > PB:
-            print('{} anos.'.format(y))
-            break
-        y += 1
+
+population_increase(int(input()))
+
+
+# from math import floor #Para não ter números com casa decimais
+#
+# T = int(input())
+#
+# for c in range(0, T):
+#     PA, PB, G1, G2 = input().split()
+#     PA = int(PA)
+#     PB = int(PB)
+#     G1 = float(G1)
+#     G2 = float(G2)
+#     y = 1
+#     while True:
+#         PA += floor(PA * (G1 / 100))
+#         PB += floor(PB * (G2 / 100))
+#         print(f"{PA} - {PB}")
+#         if y > 100:
+#             print('Mais de 1 seculo.')
+#             break
+#         if PA > PB:
+#             print('{} anos.'.format(y))
+#             break
+#         y += 1
